@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Location Incorporator Dashboard Sample</title>
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <section class="sidebar">
+      <header>
+        <div class="burger"></div>
+        <h1>Location Incorporator Excerpt</h1>
+      </header>
+      <ul class="menu">
+        <li class="menu-item">
+          <a href="https://www.openstreetmap.org">Use Open Street Map services</a>
+	</li>
+        <li class="menu-item">
+          <a href="">Geo-Location Latitude & Longitude services (Future scope)</a>
+        </li>
+        <li class="menu-item">
+          <a href="">Geo-Location Latitude & Longitude services Watch services (Future scope)</a>
+        </li>
+        <li class="menu-item">
+          <a href="">Geo-Location Notifications (Future scope)</a>
+        </li>
+	<li class="menu-item">
+          <a href="">Geo-Location Alerts (Future scope)</a>
+        </li>
+      </ul>
+	<button id = "find-me">Show my location</button><br/>
+	<p id = "status"></p>
+	<a id = "map-link" target="_blank"></a>
+	<script>   
+	function geoFindMe() {
+
+  		const status = document.querySelector('#status');
+ 		const mapLink = document.querySelector('#map-link');
+
+  		mapLink.href = '';
+  		mapLink.textContent = '';
+
+  		function success(position) {
+    			const latitude  = position.coords.latitude;
+    			const longitude = position.coords.longitude;
+
+    			status.textContent = '';
+    			mapLink.href = `https://www.openstreetmap.org/#map=18/${latitude}/${longitude}`;
+    			mapLink.textContent = `Latitude: ${latitude} °, Longitude: ${longitude} °`;
+  		}
+
+  		function error() {
+    			status.textContent = 'Unable to retrieve your location';
+  		}
+
+  		if(!navigator.geolocation) {
+    			status.textContent = 'Geolocation is not supported by your browser';
+  		} else {
+    			status.textContent = 'Locating…';
+    			navigator.geolocation.getCurrentPosition(success, error);
+  		}
+
+	}
+
+	document.querySelector('#find-me').addEventListener('click', geoFindMe);
+	</script>   
+      <div class="sidenav-settings">
+        <settings-panel></settings-panel>
+      </div>
+    </section>
+    <section class="content-wrapper">
+      <div class="home-content">
+        <img src=""/>
+        <section class="home-text">
+          <p>This Dashboard is a demo of the integration of the Location Incorporator inside this web site,</p>       
+  </body>
+</html>
