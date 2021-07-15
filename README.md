@@ -3,6 +3,8 @@ By Venkatram, Gap Analyst AOEC 2021
 
 Project name: Location Incorporator (Work in progress, design specification stage only)
 
+Please review our Pitch presentation to understand our aim and solution finding.
+
 Aim: We know of hybrid vehicles that switch between ICE to EV. Tomorrow, this decision making may need to be assisted by a Mobilizer Control Unit that uses RoadMIR Desks and vehicle enabled location data. The new Mobilizer Control Unit will need to be evaluated for scope and purpose by automotive engineering companes and vehicle manufacturers but the Location Incorporation solution can proceed irrespective.
 
 ## Inspiration
