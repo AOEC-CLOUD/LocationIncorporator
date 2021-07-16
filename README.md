@@ -34,3 +34,5 @@ Proof of concept URL: www.venkataoec.wixsite.com/futureinternet
 
 Proof of concept URL: www.venkataoec.wixsite.com/safercommuting
 
+Known issues:
+Due to the Wix platform supporting our home page (where we do not actually own a domain name for our website wwww.venkataoec.wixsite.com/driveindia we are facing some problems in integrating the location lookup. However we have provided a LocationIncorporator.html to demonstrate what we expect to implement.
